@@ -22,15 +22,18 @@ public class A5Q1 {
         System.out.println("Please enter a word");
         String word = input.nextLine();
         String Matten = word;
-        //Put ee at the end of the word if it starts with a vowel
+        
+          
+        //Replace the first letter of the word with i if it starts with a vowel
         if (Matten.startsWith("a")
                 || Matten.startsWith("o")
                 || Matten.startsWith("e")
                 || Matten.startsWith("u")) {
             Matten = Matten.substring(1);
-            Matten = "i" + Matten;
+            Matten = "i" + Matten + "ee";
+            System.out.println("In Mattenenglisch " + Matten);
         } else {
-
+//if word doesn't start with a vowel
             while (!word.startsWith("a")
                     && !word.startsWith("e")
                     && !word.startsWith("i")
@@ -38,13 +41,10 @@ public class A5Q1 {
                     && !word.startsWith("u")) {
                 
 
-                if (word.equals("END")) {
-                    System.out.println("Buhbye!");
-                    break;
-                }
-                    //if the word starts with a vowel put it at the end of the word
-                if (Matten.startsWith("a")
-                        || Matten.startsWith("e")
+            
+                    
+                if (!Matten.startsWith("a")
+                        || !Matten.startsWith("e")
                         || !Matten.startsWith("o")
                         || !Matten.startsWith("u")
                         || !Matten.startsWith("i")
@@ -67,6 +67,8 @@ public class A5Q1 {
                     Matten = Matten.replaceFirst(firstLetter, "i");
                     System.out.println("Matten: " + Matten + "ee");
                     break;
+                    
+                 
                 }
 
             }
